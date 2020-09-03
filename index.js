@@ -77,7 +77,6 @@ function inning(){
   let points = Math.floor(Math.random() * 3);
   return points;
 }
- 
 /* Task 3: finalScore()
 
 Write a higher order function called `finalScore` that accepts the callback function `inning` (from above) and a number of innings and and returns the final score of the game in the form of an object.
@@ -91,27 +90,17 @@ finalScore(inning, 9) might return:
 }
 
 */ 
-
-
-
-
 function finalScore(myFunc, inningsPlayed){
 
   let score = { Home : 0, Away : 0 };
   for (let i = 0 ; i < inningsPlayed ; i++)
     {
     score.Home = ( score.Home + myFunc() );
-    
     score.Away = ( score.Away + myFunc() );
- 
     }
   return score;
 }
-console.log(finalScore(inning, 1));
-
-
-
-
+finalScore(inning, 1);
 //Another Fail
 // function finalScore(myFunc, inningsPlayed){
 //   const score = { Home : 0, Away : 0 };
@@ -130,17 +119,6 @@ console.log(finalScore(inning, 1));
 //   let points = 0;
 //   return points = Math.floor(Math.random() * 3);
 // }
-
-
-
-
-
-
-
-
-
-
-
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
@@ -166,24 +144,119 @@ Final Score: awayTeam - homeTeam */
 // let away = 0;
 // let score = { Home : home, Away : away };
 
+function scoreboard ( inningFunc , scoreFunc , roundsPlayed ) {
+  let currentRound = 1;
+  for (let i = 1 ; i < roundsPlayed ; i++){
+       if ( i <= roundsPlayed){
+        console.log(currentRound);
+        scoreFunc(inningFunc, roundsPlayed)
+        currentRound =+ 1; 
 
-let homeScore = [];
-let awayScore = [];
+        }
+    return "hi"
 
-
-function scoreboard( myFunc, totalRound) {
- let homeScore = [];
- let awayScore = [];
-  let finalScore = { Away : 0, Home : 0 };
-  for ( let i = 0 ; i < totalRound ; i++ ){
-    homeScore.push(myFunc());
-    awayScore.push(myFunc());
-    return `Inning: ${totalRound}: Away Team: ${awayscore[i]} - Home Team: ${homeScore[i]'`
-    }
-    console.log(awayScore);
-    console.log(homeScore);
-  
+  }
 }
-scoreboard(inning, 9 )
-console.log(awayScore);
-console.log(homeScore);
+console.log(scoreboard(inning,scoreboard,9));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function scoreboard( myFunc, totalRound) {
+//   let homeScore = [];
+//   let awayScore = [];
+//   let thisRound = 0;
+//   let score = {Home:0, Away:0};
+//   for ( let i = thisRound ; i < totalRound ; i++ ){
+//     homeScore.push(myFunc());
+//     awayScore.push(myFunc());
+//     thisRound = thisRound + 1;
+//     // console.log(awayScore);
+//     // console.log(homeScore);
+//     // console.log(thisRound);
+//     return `Inning: ${totalRound}: Away Team: ${awayScore} - Home Team: ${homeScore}'`
+//     } 
+// }
+// console.log(scoreboard(inning, 9 ));
+
+
+
+
+
+//REFERNCE CODE
+
+//
+// function finalScore(myFunc, inningsPlayed){
+
+//   let score = { Home : 0, Away : 0 };
+//   for (let i = 0 ; i < inningsPlayed ; i++)
+//     {
+//     score.Home = ( score.Home + myFunc() );
+    
+//     score.Away = ( score.Away + myFunc() );
+ 
+//     }
+//   return score;
+// }
+// console.log(finalScore(inning, 1));
+
+
+///f1
+function inning(){
+  let points = Math.floor(Math.random() * 3);
+  return points;
+}
+///f2
+function finalScore(myFunc, inningsPlayed){
+
+  let score = { Home : 0, Away : 0 };
+  for (let i = 0 ; i < inningsPlayed ; i++)
+    {
+    score.Home = ( score.Home + myFunc() );
+    score.Away = ( score.Away + myFunc() );
+    }
+  return score;
+}
+finalScore(inning, 1);
+
+///f3
+function scoreboard ( , , ) {
+//Establishing variables
+  let currentRound = 1;
+//Start of each inning
+  for ( let i = 1; i < roundsPlayed ; i++ )
+    console.log()
+
+}
+
+
+
+
+
+
+
+function scoreboard ( inningFunc , scoreFunc , roundsPlayed ) {
+  let currentRound = 1;
+  for (let i = 1 ; i < roundsPlayed ; i++){
+       if ( i <= roundsPlayed){
+        console.log(currentRound);
+        scoreFunc(inningFunc, roundsPlayed)
+        currentRound =+ 1; 
+
+        }
+    return "hi"
+
+  }
+}
+console.log(scoreboard(inning,scoreboard,9));
+
+
