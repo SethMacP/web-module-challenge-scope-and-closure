@@ -178,7 +178,7 @@ function scoreboard( myFunc, totalRound) {
   for ( let i = 0 ; i < totalRound ; i++ ){
     homeScore.push(myFunc());
     awayScore.push(myFunc());
-    return 'Inning: ${totalRound}'
+    return `Inning: ${totalRound}: Away Team: ${awayscore[i]} - Home Team: ${homeScore[i]'`
     }
     console.log(awayScore);
     console.log(homeScore);
