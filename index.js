@@ -144,27 +144,33 @@ Final Score: awayTeam - homeTeam */
 // let home = 0;
 // let away = 0;
 // let score = { Home : home, Away : away };
-
+function sum (acc, val) {
+  return acc + val;
+}
 
 
 
 ///f3
-let scoreboard = ( myf1, myf2, totalRound ) => {
+let scoreboard = ( myfunc1, myfunc2, totalRound ) => {
 //Establishing variables
   let currentRound = 1;
+
   //Start of each inning
   for ( let i = 1; i = currentRound ; i++ )
     if(currentRound <= totalRound) {
-      finalScore(inning, 1)
-      
+      //Grab score for each inning
+      myfunc2(myfunc1(), 1)
+      //Log results of score, per inning
       console.log( `Inning: ${currentRound} | Away: ${score[i].Away} - Home: ${score[i].Home}`)
+      //Advance to next inning
       currentRound += 1;
+      return score;
 }
 else{
-  let totalAway = score.away.reduce ((accumulator, currentValue)=> {
-    return accumulator + currentValue;
-  }, 0);
-return totalAway;
+  //Report the final score at the end of the game.
+  let totalAway = score.Away;
+  console.log(totalAway);
+
   }
 }
 
