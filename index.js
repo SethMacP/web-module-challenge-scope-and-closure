@@ -90,17 +90,15 @@ finalScore(inning, 9) might return:
 }
 
 */
-let score = [{ Away : 0, Home : 0 }]; 
+var score = [{ Away : 0, Home : 0 }]; 
 function finalScore(myFunc, inningsPlayed){
   for (let i = 0 ; i < inningsPlayed ; i++)
     {
-     let results =  score.push({ Away: myFunc() , Home: myFunc() });
+     let results =  score.push({ Away: inning() , Home: inning() });
     }
   return score;
 }
-console.log(finalScore(inning, 9));
-
-
+console.log(finalScore(inning(), 9));
 
 //Another Fail
 // function finalScore(myFunc, inningsPlayed){
@@ -139,22 +137,15 @@ and returns the score at each pont in the game, like so:
 8th inning: awayTeam - homeTeam
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
-
-
 // let home = 0;
 // let away = 0;
 // let score = { Home : home, Away : away };
-function sum (acc, val) {
-  return acc + val;
-}
-
 
 
 ///f3
 let scoreboard = ( myfunc1, myfunc2, totalRound ) => {
 //Establishing variables
   let currentRound = 1;
-
   //Start of each inning
   for ( let i = 1; i = currentRound ; i++ )
     if(currentRound <= totalRound) {
@@ -168,11 +159,17 @@ let scoreboard = ( myfunc1, myfunc2, totalRound ) => {
 }
 else{
   //Report the final score at the end of the game.
-  let totalAway = score.Away;
-  console.log(totalAway);
-
+  score.reduce(function (acc, obj) { return acc + obj.away; }, 0);
+  score.reduce(function (acc, obj) { return acc + obj.home; }, 0);
+  console.log(score);
   }
 }
-
-
 scoreboard(inning, finalScore, 9);
+
+
+
+
+
+// var arr = [{x:1}, {x:2}, {x:4}];
+// arr.reduce(function (acc, obj) { return acc + obj.x; }, 0); // 7
+// console.log(arr);
