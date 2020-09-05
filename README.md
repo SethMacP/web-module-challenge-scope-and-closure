@@ -64,10 +64,15 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  
   Line 50 - its a function inside of a function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
   The same: The name and string associated with the call will stay the same, but the roll will always print a new number. 
+
 c. What is the lexical scope of `newRoll`? 
+
   It is pulling in the name of Dan from outside of the function.
 
 ### Task 2c - Exit Ticket
