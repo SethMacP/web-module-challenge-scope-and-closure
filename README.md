@@ -27,21 +27,22 @@ There are layers upon layers of nested functions within the game of baseball. Yo
 
 ### Task 1 - Set Up Project and Tests
 
-1. Fork repo and add TL as collaborator on Github
-2. Clone _your_ fork (not Lambda's repo by mistake!)
-3. `cd` into your newly cloned repository
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`
-5. Work on your branch, push commits and create PR as usual
+[x]1. Fork repo and add TL as collaborator on Github
+[x]2. Clone _your_ fork (not Lambda's repo by mistake!)
+[x]3. `cd` into your newly cloned repository
+[x]4. Create a new branch by typing `git checkout -b <firstName-lastName>`
+[x]5. Work on your branch, push commits and create PR as usual
 
 ### Task 2a - MVP code
 
-Find the file `index.js` and complete the tasks.
+[]Find the file `index.js` and complete the tasks.
 
 ### Task 2b - Written questions
 
-Edit the `ReadMe` file with your answers.
+[]Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  (Loosely) the opposite of hoisiting. Hoisting would be sending information 'up' to the top to be run early whereas closure brings information from outside, in to be worked with. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +64,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  
+  Line 50 - its a function inside of a function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+  The same: The name and string associated with the call will stay the same, but the roll will always print a new number. 
+
 c. What is the lexical scope of `newRoll`? 
+
+  It is pulling in the name of Dan from outside of the function.
 
 ### Task 2c - Exit Ticket
 
